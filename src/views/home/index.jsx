@@ -3,9 +3,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TodoActionCreators from 'actions/todo';
 import TodoList from 'components/todo-list';
+import ProperListRender from 'components/new_component/test.jsx';
+import Layout from 'components/new_component/layout.jsx';
 
-// TODO: make the create-todo form a component so that a bound action
-// can be provided rather than manually using this.props.dispatch(action)
 @connect(state => ({ todos : state.todos }))
 export default class HomeView extends React.Component {
   constructor () {
@@ -62,8 +62,9 @@ export default class HomeView extends React.Component {
       <div className='view view--home'>
         <div className='row'>
           <div className='col-md-8 col-md-offset-2'>
-            <TodoList todos={todos} {...this._todoActions} />
-            {this.renderNewTodoForm()}
+			<Layout>
+				<ProperListRender list={[1,2,3,4,'five',6,7,8,9,10]}/>
+			</Layout>			
           </div>
         </div>
       </div>
