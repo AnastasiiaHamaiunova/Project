@@ -1,0 +1,47 @@
+.main{
+    background-color: aqua;
+}
+.devices{
+    height: 250px;    
+    background-color: black;
+}
+.list{
+    height: 250px;   
+    background-color:chocolate;
+}
+.chart{
+    height: 80px;    
+    background-color: azure;
+}
+.map{   
+    height: 80px;
+    background-color: cornflowerblue;
+}
+/*.list, .map{
+    float:right;
+}
+.devices, .chart{
+    float:left;
+}*/
+.nav{
+    background-color:bisque;
+    float:left;
+    width: 100px;
+    min-height: 450px;
+}
+.content{
+    float: right;
+    width: 900px;
+}
+
+.content .row{
+    margin-left: 0;
+}
+
+.content .row div{
+    margin: 30px;
+}
+.header{
+    background-color:blueviolet;
+    height: 70px;
+}

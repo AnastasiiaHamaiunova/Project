@@ -5,6 +5,13 @@ import * as TodoActionCreators from 'actions/todo';
 import TodoList from 'components/todo-list';
 import ProperListRender from 'components/new_component/test.jsx';
 import Layout from 'components/new_component/layout.jsx';
+import Devices  from 'components/new_component/devices.jsx';
+import List  from 'components/new_component/list.jsx';
+import Chart  from 'components/new_component/chart.jsx';
+import Map  from 'components/new_component/map.jsx';
+import SideBar  from 'components/new_component/sideBar.jsx';
+import Header  from 'components/new_component/header.jsx';
+
 
 @connect(state => ({ todos : state.todos }))
 export default class HomeView extends React.Component {
@@ -58,16 +65,24 @@ export default class HomeView extends React.Component {
   render () {
     const todos = this.props.todos.toJS();
 
-    return (
-      <div className='view view--home'>
-        <div className='row'>
-          <div className='col-md-8 col-md-offset-2'>
+    return (       
+        <Layout>
+            <div>
+              <Header/>
+            </div>
+           <div className="nav">
+            <SideBar/>
+           </div>
+           <div className="content">       
 			<Layout>
-				<ProperListRender list={[1,2,3,4,'five',6,7,8,9,10]}/>
-			</Layout>			
-          </div>
-        </div>
-      </div>
+				<div className = "row"><Devices/><List/>
+				</div>
+				<div className = "row"><Chart/><Map/>
+				</div>				
+			</Layout>
+			</div>   
+		</Layout>  
+         
     );
   }
 }
