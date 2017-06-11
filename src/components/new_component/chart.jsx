@@ -4,7 +4,7 @@ export default class Chart extends React.Component {
     render () {
       return (
             <div className="chart col-md-6">
-                <span>Chart</span>
+                <span>{this.props.sumLastIndexes}</span>
             </div>
         )
     }

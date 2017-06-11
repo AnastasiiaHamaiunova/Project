@@ -4,7 +4,7 @@ export default class SideBar extends React.Component {
     render () {
       return (
         <nav>
-            <button>Click</button>
+            <button onClick={this.props.addToList}>Click</button>
         </nav>
       )
     }
